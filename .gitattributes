@@ -1,0 +1,32 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Force batch scripts to always use CRLF line endings
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
+
+# Force bash scripts to always use LF line endings
+*.sh text eol=lf
+
+# Dart files
+*.dart linguist-language=Dart
+*.g.dart linguist-language=Dart
+*.freezed.dart linguist-language=Dart
+
+# Flutter specific
+pubspec.yaml linguist-language=Dart
+pubspec.lock linguist-language=Dart
+
+# Android files (should not affect language detection)
+*.kt linguist-vendored
+*.kts linguist-vendored
+*.gradle linguist-vendored
+*.xml linguist-vendored
+*.properties linguist-vendored
+
+# iOS files (should not affect language detection)
+*.swift linguist-vendored
+*.h linguist-vendored
+*.m linguist-vendored
+*.plist linguist-vendored
+*.xcconfig linguist-vendored 

@@ -8,25 +8,37 @@
 # Force bash scripts to always use LF line endings
 *.sh text eol=lf
 
-# Dart files
+# Explicitly mark Dart as the primary language
 *.dart linguist-language=Dart
 *.g.dart linguist-language=Dart
 *.freezed.dart linguist-language=Dart
-
-# Flutter specific
 pubspec.yaml linguist-language=Dart
 pubspec.lock linguist-language=Dart
+analysis_options.yaml linguist-language=Dart
 
-# Android files (should not affect language detection)
+# Mark all platform-specific code as vendored (won't affect language stats)
+android/** linguist-vendored
+ios/** linguist-vendored
 *.kt linguist-vendored
 *.kts linguist-vendored
 *.gradle linguist-vendored
 *.xml linguist-vendored
 *.properties linguist-vendored
-
-# iOS files (should not affect language detection)
 *.swift linguist-vendored
 *.h linguist-vendored
 *.m linguist-vendored
 *.plist linguist-vendored
-*.xcconfig linguist-vendored 
+*.xcconfig linguist-vendored
+
+# Mark other non-Dart files as vendored
+supabase/** linguist-vendored
+scripts/** linguist-vendored
+.vscode/** linguist-vendored
+*.md linguist-vendored
+*.txt linguist-vendored
+*.json linguist-vendored
+*.yaml linguist-vendored
+*.yml linguist-vendored
+*.lock linguist-vendored
+*.gitignore linguist-vendored
+*.gitattributes linguist-vendored 
